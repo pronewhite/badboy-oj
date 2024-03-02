@@ -3,10 +3,10 @@
 # @from <a href="https://yupi.icu">编程导航知识星球</a>
 spring:
   application:
-    name: springboot-init
+    name: badboyOJ
   # 默认 dev 环境
   profiles:
-    active: dev
+    active: test
   # 支持 swagger3
   mvc:
     pathmatch:
@@ -14,16 +14,16 @@ spring:
   # session 配置
   session:
     # todo 取消注释开启分布式 session（须先配置 Redis）
-    # store-type: redis
+    store-type: redis
     # 30 天过期
     timeout: 2592000
   # 数据库配置
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_db
+    url: jdbc:mysql://localhost:3306/bbog
     username: root
-    password: 123456
+    password: root
   # Redis 配置
   # todo 需替换配置，然后取消注释
 #  redis:
@@ -45,7 +45,7 @@ spring:
       max-file-size: 10MB
 server:
   address: 0.0.0.0
-  port: 8101
+  port: 8121
   servlet:
     context-path: /api
     # cookie 30 天过期
@@ -90,3 +90,6 @@ cos:
     secretKey: xxx
     region: xxx
     bucket: xxx
+
+codesandbox:
+  type: remote
